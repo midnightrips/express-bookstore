@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Book",
+    "type": "object",
+    "properties": {
+        "isbn": {
+            "type": "string",
+            "pattern": "^(97(8|9))?\\d{9}(\\d|X)$",
+            "description": "A valid ISBN identifier"
+        },
+        "amazon_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL to the book's Amazon page"
+        },
+        "author": {
+            "type": "string",
+            "description": "Name of the book's author"
+        },
+        "language": {
+            "type": "string",
+            "description": "Language the book is written in"
+        },
+        "pages": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Number of pages in the book"
+        },
+        "publisher": {
+            "type": "string",
+            "description": "Publisher of the book"
+        },
+        "title": {
+            "type": "string",
+            "description": "Title of the book"
+        },
+        "year": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Publication year of the book"
+        }
+    },
+    "required": [
+        "isbn",
+        "amazon_url",
+        "author",
+        "language",
+        "pages",
+        "publisher",
+        "title",
+        "year"
+    ],
+    "additionalProperties": false
+}
